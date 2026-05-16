@@ -1,0 +1,586 @@
+/* Navbar container */
+.navbar {
+  background-color: #0f172a; /* dark blue */
+  padding: 15px 30px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+
+    position: sticky;
+  top: 0;
+  z-index: 1000;
+
+}
+.navbar-logo {
+  font-size: 20px;
+  font-weight: 700;
+  color: #38bdf8;
+  text-decoration: none;
+  margin-right: auto;
+}
+
+/* Common link style */
+.navbar a {
+  color: #e2e8f0;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  position: relative;
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.navbar a:hover {
+  color: #38bdf8; /* light blue */
+}
+
+/* Underline animation */
+.navbar a::after {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background-color: #38bdf8;
+  transition: width 0.3s ease;
+}
+
+.navbar a:hover::after {
+  width: 100%;
+}
+
+/* Active link (optional) */
+.active {
+  color: #38bdf8;
+}
+
+/* Special button style for Login & Signup */
+.ra_login,
+.ra_signup {
+  background-color: #38bdf8;
+  color: #0f172a !important;
+  padding: 6px 14px;
+  border-radius: 6px;
+}
+
+.ra_login:hover,
+.ra_signup:hover {
+  background-color: #0ea5e9;
+  color: white !important;
+}
+
+
+
+/* Center the login  form ---------------------------------------*/
+/* body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+} */
+
+/* Form container */
+.ra_login_form {
+  background-color: #ffffff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  width: 320px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Heading */
+.ra_login_form h3 {
+  margin-bottom: 20px;
+  color: #0f172a;
+  font-size: 22px;
+}
+
+/* Inputs */
+.ra_login_form input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+/* Input focus */
+.ra_login_form input:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 5px rgba(56, 189, 248, 0.5);
+}
+
+/* Button */
+.ra_login_form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  background-color: #38bdf8;
+  border: none;
+  color: #0f172a;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+/* Button hover */
+.ra_login_form button:hover {
+  background-color: #0ea5e9;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .ra_login_form {
+    width: 90%;
+  }
+}
+
+.signup_link {
+  color: #38bdf8;
+  cursor: pointer;
+  font-weight: 500;
+}
+.signup_link:hover {
+  text-decoration: underline;
+}
+
+/* signup link form ----------------- */
+/* Container */
+.ra_signup_form {
+  background-color: #ffffff;
+  padding: 30px 25px;
+  border-radius: 12px;
+  width: 340px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+/* Heading */
+.ra_signup_form h3 {
+  margin-bottom: 20px;
+  color: #0f172a;
+  font-size: 22px;
+}
+
+/* Inputs */
+.ra_signup_form input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.ra_signup_form input:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 5px rgba(56, 189, 248, 0.5);
+}
+
+/* Button */
+.ra_signup_form button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  background-color: #22c55e;
+  border: none;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.ra_signup_form button:hover {
+  background-color: #16a34a;
+}
+
+/* Login Link (NavLink) */
+.ra_signup_form a {
+  display: block;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #38bdf8;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+/* Hover effect */
+.ra_signup_form a:hover {
+  text-decoration: underline;
+  color: #0ea5e9;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .ra_signup_form {
+    width: 90%;
+  }
+}
+
+/* home page --------------- */
+
+/* Container */
+.ra_home_container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Content box */
+.ra_home_container div {
+  max-width: 600px;
+}
+
+/* Title */
+.ra_home_container p:first-child {
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+/* Subtitle */
+.ra_home_container p:nth-child(2) {
+  font-size: 18px;
+  color: #cbd5f5;
+  margin-bottom: 10px;
+}
+
+/* Description */
+.ra_home_container p:nth-child(3) {
+  font-size: 15px;
+  color: #94a3b8;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+/* Button */
+.ra_home_cv_button {
+  padding: 12px 25px;
+  background-color: #38bdf8;
+  border: none;
+  border-radius: 8px;
+  color: #0f172a;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* Hover */
+.ra_home_cv_button:hover {
+  background-color: #0ea5e9;
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(56, 189, 248, 0.4);
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .ra_home_container p:first-child {
+    font-size: 22px;
+  }
+
+  .ra_home_container p:nth-child(2) {
+    font-size: 16px;
+  }
+
+  .ra_home_container p:nth-child(3) {
+    font-size: 14px;
+  }
+}
+
+/* resume page ..... */
+/* Main container */
+.ra_resume_container {
+  display: flex;
+  height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  color: white;
+}
+
+/* LEFT SECTION */
+.ra_resume_left {
+  flex: 1;
+  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.ra_resume_left h2 {
+  font-size: 32px;
+  margin-bottom: 20px;
+}
+
+.ra_resume_left p {
+  font-size: 16px;
+  color: #cbd5e1;
+  margin-bottom: 12px;
+  line-height: 1.6;
+}
+
+/* RIGHT SECTION (CARD) */
+.ra_resume_right {
+  flex: 1;
+  background-color: #ffffff;
+  color: #0f172a;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 40px;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  box-shadow: -5px 0 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Right content */
+.ra_resume_right h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.ra_resume_right p {
+  font-size: 14px;
+  color: #475569;
+  margin-bottom: 20px;
+}
+
+/* File input */
+.ra_resume_right input[type="file"] {
+  margin-bottom: 15px;
+  padding: 8px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* File name */
+.ra_resume_right p:last-of-type {
+  font-size: 13px;
+  color: #16a34a;
+  margin-bottom: 15px;
+}
+
+/* Button */
+.ra_resume_right button {
+  padding: 10px;
+  background-color: #38bdf8;
+  border: none;
+  border-radius: 6px;
+  color: #0f172a;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.ra_resume_right button:hover {
+  background-color: #0ea5e9;
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .ra_resume_container {
+    flex-direction: column;
+  }
+
+  .ra_resume_left {
+    padding: 30px;
+    text-align: center;
+  }
+
+  .ra_resume_right {
+    border-radius: 20px 20px 0 0;
+    padding: 25px;
+  }
+}
+
+/* contact page ... */
+
+/* Main container */
+.ra_contact_container {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: white;
+}
+
+/* Card */
+.ra_contact_card {
+  background: #ffffff;
+  color: #0f172a;
+  padding: 30px;
+  border-radius: 12px;
+  width: 400px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* Heading */
+.ra_contact_card h1 {
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.ra_contact_card p {
+  font-size: 14px;
+  color: #475569;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form fields */
+.ra_contact_card form div {
+  margin-bottom: 15px;
+}
+
+.ra_contact_card label {
+  display: block;
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+/* Inputs */
+.ra_contact_card input,
+.ra_contact_card textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  outline: none;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.ra_contact_card input:focus,
+.ra_contact_card textarea:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 5px rgba(56, 189, 248, 0.5);
+}
+
+/* Button */
+.ra_contact_card button {
+  width: 100%;
+  padding: 10px;
+  background-color: #38bdf8;
+  border: none;
+  border-radius: 6px;
+  color: #0f172a;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.ra_contact_card button:hover {
+  background-color: #0ea5e9;
+  color: white;
+}
+
+/* Status message */
+.ra_status {
+  margin-top: 10px;
+  font-size: 13px;
+  color: #16a34a;
+  text-align: center;
+}
+
+/* Contact info */
+.ra_contact_card ul {
+  margin-top: 20px;
+  padding: 0;
+  list-style: none;
+  font-size: 14px;
+  color: #475569;
+}
+
+.ra_contact_card ul li {
+  margin-bottom: 5px;
+}
+
+/* Responsive */
+@media (max-width: 450px) {
+  .ra_contact_card {
+    width: 90%;
+  }
+}
+
+/* about us page -------- */
+/* Main container
+.about {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px 20px;
+} */
+
+/* Content box */
+.about {
+  color: white;
+}
+
+.about {
+  max-width: 800px;
+  margin: auto;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 40px;
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+
+/* Heading */
+.about h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 32px;
+}
+
+/* Paragraphs */
+.about p {
+  font-size: 15px;
+  color: #cbd5e1;
+  line-height: 1.7;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .about {
+    padding: 25px;
+  }
+
+  .about h1 {
+    font-size: 26px;
+  }
+
+  .about p {
+    font-size: 14px;
+  }
+}
